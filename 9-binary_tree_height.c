@@ -5,10 +5,10 @@
 /**
  * binary_tree_height: height
  *
- * @binary_tree_t: Pointer to the tree node
+ * @tree: Pointer to the tree node
  *
  *
- * Return: binary_tree_t
+ * Return: size_t
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
