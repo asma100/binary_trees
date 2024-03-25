@@ -5,8 +5,7 @@
 /**
  * binary_tree_is_leaf - leaf or not
  *
- * @tree: Pointer to the node
-
+ * @node: Pointer to the node
  *
  * Return: 1 or 0
  */
