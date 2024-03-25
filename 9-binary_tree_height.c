@@ -24,5 +24,5 @@ if (left_height > right_height)
 max_height = left_height;
 else
 max_height = right_height;
-return (max_height);
+return (max_height + 1);
 }
