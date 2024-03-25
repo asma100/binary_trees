@@ -17,7 +17,7 @@ binary_tree_t *newr;
 if (!parent)
 return (NULL);
 newr = binary_tree_node(parent, value);
-if(!newr)
+if (!newr)
 return (NULL);
 if (parent->right)
 {
