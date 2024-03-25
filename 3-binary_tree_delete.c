@@ -8,29 +8,16 @@
  *
  * Return: binary_tree_t
  */
-void binary_tree_delete(binary_tree_t *tree)
+void binary_tree_delete(binary_tree_t *root)
 {
-binary_tree_t *i;
+if (root == NULL) 
+return;
+binary_tree_delete(root->left);
+binary_tree_delete(root->right);
+free(root->left);
+root->left = NULL;
+free(root->right);
+root->right = NULL;
+free(root);
+}
 
-for (i = tree; i->left == NULL; i = i->left)
-{
-if (i->left == NULL)
-delete_node(i);
-}
-for (i = tree; i->right == NULL; i = i->right)
-{
-if (i->right == NULL)
-delete_node(i);
-}
-delete_node(tree);
-}
-void delete_node (binary_tree_t *node)
-{
-if (node->left)
-free(node->left);
-node->left = NULL;
-if (node->right)
-free(node->right);
-node->right = NULL;
-free(node);
-}
