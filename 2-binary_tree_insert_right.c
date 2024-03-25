@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "binary_trees.h"
 /**
- * binary_tree_insert_right: insert_right
+ * binary_tree_insert_right - insert_right
  *
  * @parent: Pointer to the parent node
  * @value: int
