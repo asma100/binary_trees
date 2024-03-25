@@ -3,7 +3,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height: the height 
+ * binary_tree_height:the height
  *
  * @tree: Pointer to the tree node
  *
