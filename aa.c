@@ -7,24 +7,29 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
-{
+int main(void) {
     binary_tree_t *root;
-    size_t height;
+    size_t depth;
 
+    // Create a sample binary tree
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
     root->right = binary_tree_node(root, 402);
     binary_tree_insert_right(root->left, 54);
     binary_tree_insert_right(root, 128);
+
+    // Print the tree (assuming binary_tree_print is implemented)
     binary_tree_print(root);
 
-    height = binary_tree_height(root);
-    printf("Height from %d: %lu\n", root->n, height);
-    height = binary_tree_height(root->right);
-    printf("Height from %d: %lu\n", root->right->n, height);
-    height = binary_tree_height(root->left->right);
-    printf("Height from %d: %lu\n", root->left->right->n, height);
+    // Calculate and print depths
+    depth = binary_tree_height(root);
+    printf("Depth of %d: %zu\n", root->n, depth);  // Use %zu for size_t
+
+    depth = binary_tree_height(root->right);
+    printf("Depth of %d: %zu\n", root->right->n, depth);
+
+    depth = binary_tree_height(root->left->right);
+    printf("Depth of %d: %zu\n", root->left->right->n, depth);
+
     return (0);
 }
-
