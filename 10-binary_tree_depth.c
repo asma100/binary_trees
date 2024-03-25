@@ -10,7 +10,7 @@
  *
  * Return: size_t
  */
-size_t binary_tree_leaf_level_depth(const binary_tree_t *tree) {
+size_t binary_tree_depth(const binary_tree_t *tree) {
   if (tree == NULL) {
     return 0;  // Base case: empty tree or NULL node has depth 0
   }
@@ -21,8 +21,8 @@ size_t binary_tree_leaf_level_depth(const binary_tree_t *tree) {
   }
 
   // Recursively calculate the depths of the left and right subtrees
-  size_t left_depth = binary_tree_leaf_level_depth(tree->left);
-  size_t right_depth = binary_tree_leaf_level_depth(tree->right);
+  size_t left_depth = binary_tree_depth(tree->left);
+  size_t right_depth = binary_tree_depth(tree->right);
 
   // Return the maximum depth of its children + 1 (for current level)
   return (left_depth > right_depth) ? left_depth + 1 : right_depth + 1;
