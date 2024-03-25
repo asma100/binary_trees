@@ -15,7 +15,7 @@ size_t tree_height;
 size_t depth;
 if (tree == NULL)
 return 0;
-size_t tree_height = binary_tree_height(tree);
+tree_height = binary_tree_height(tree);
 depth = tree_height - binary_tree_height(tree->left) - binary_tree_height(tree->right) + 1;
 return (depth);
 }
