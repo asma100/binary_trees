@@ -23,6 +23,6 @@ right_height = binary_tree_height(tree->right);
 if (left_height > right_height)
 max_height = left_height;
 else
-max_height = right_height + 1;
+max_height = right_height;
 return (max_height);
 }
