@@ -19,6 +19,7 @@ return (1);
 else
 return (0);
 }
+
 /**
  * binary_tree_is_full - full or not
  *
