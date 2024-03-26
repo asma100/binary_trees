@@ -34,7 +34,7 @@ size_t leaves = 0;
 if (tree == NULL)
 return (0);
 leaves += binary_tree_is_child(tree);
-leaves += binary_tree_leaves(tree->left);
-leaves += binary_tree_leaves(tree->right);
+leaves += binary_tree_nodes(tree->left);
+leaves += binary_tree_nodes(tree->right);
 return (leaves);
 }
