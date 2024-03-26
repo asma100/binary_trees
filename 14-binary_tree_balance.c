@@ -19,11 +19,11 @@ return (0);
 if (tree->left)
 left_height = 1 + binary_tree_balance(tree->left);
 else
-left_height = 1;
+left_height = 0;
 if (tree->right)
 right_height = 1 + binary_tree_balance(tree->right);
 else
-right_height = 1;
+right_height = 0;
 balance = left_height - right_height;
 return (balance);
 }
