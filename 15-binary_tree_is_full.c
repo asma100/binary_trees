@@ -21,7 +21,7 @@ return (0);
 
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-int full_1 = 0, full_r = 0, full_n = 0, full = 0;
+int full_1 , full_r , full_n , full ;
 
 if (tree == NULL)
 return (0);
