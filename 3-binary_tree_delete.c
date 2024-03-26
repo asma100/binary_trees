@@ -12,11 +12,7 @@ void binary_tree_delete(binary_tree_t *root)
 {
 if (root == NULL)
 return;
-free(root->left);
-root->left = NULL;
-free(root->right);
-root->right = NULL;
-free(root);
 binary_tree_delete(root->left);
 binary_tree_delete(root->right);
+free(root);
 }
