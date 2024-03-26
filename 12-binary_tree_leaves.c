@@ -12,13 +12,15 @@
  */
 
 size_t binary_tree_leaves(const binary_tree_t *tree)
-{
-size_t leaves = 0;
-int leaf;
-leaf = binary_tree_is_leaf(tree);
-leaves = leaves + leaf;
-binary_tree_leaves(tree->left);
-binary_tree_leaves(tree->right);
-binary_tree_leaves(tree);
-return(leaves);
+ {
+  if (tree == NULL) {
+    return 0;
+  }
+
+  size_t leaves = 0;
+  leaves += binary_tree_is_leaf(tree);  // Call the function to check current node
+  leaves += binary_tree_leaves(tree->left);
+  leaves += binary_tree_leaves(tree->right);
+
+  return leaves;
 }
