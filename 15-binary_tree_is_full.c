@@ -29,7 +29,7 @@ full_n = node_is_full(tree);
 full_1 = full_n * binary_tree_is_full(tree->left);
 full_r = full_n * binary_tree_is_full(tree->right);
 full = full_1 * full_r;
-return (full);
+return (full_n);
 }
 
 
