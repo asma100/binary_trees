@@ -21,14 +21,14 @@ return (0);
 
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-int full = 0;
+int full_1 = 0, full_r = 0, full_n = 0, full = 0;
 
 if (tree == NULL)
 return (0);
- full = node_is_full(tree);
- binary_tree_is_full(tree->left);
- binary_tree_is_full(tree->right);
-
+full_n = node_is_full(tree);
+full_1 = binary_tree_is_full(tree->left);
+full_r = binary_tree_is_full(tree->right);
+full = full_n && full_1 && full_r;
 return (full);
 }
 
