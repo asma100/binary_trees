@@ -8,17 +8,29 @@
  *
  * Return: 1 or 0
  */
-int binary_tree_is_full(const binary_tree_t *tree)
+int node_is_full(const binary_tree_t *tree)
 {
 if (tree == NULL)
 return (0);
 if ((tree->left == NULL && tree->right == NULL) ||(tree->left != NULL && tree->right != NULL))
-{
-binary_tree_is_full(tree);
 return (1);
-}
 else
 return (0);
+}
+
+
+size_t binary_tree_is_full(const binary_tree_t *tree)
+{
+size_t full_1, full_r, full;
+
+if (tree == NULL)
+return (0);
+node_is_full(tree);
+full_1 = binary_tree_full(tree->left);
+full_r = binary_tree_full(tree->right);
+if(full_1 == 1 && full_r == 1)
+full = 1;
+return (full);
 }
 
 
