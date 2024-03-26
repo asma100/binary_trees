@@ -25,11 +25,10 @@ int full_1 = 0, full_r = 0, full = 0;
 
 if (tree == NULL)
 return (0);
-node_is_full(tree);
-full_1 = binary_tree_is_full(tree->left);
-full_r = binary_tree_is_full(tree->right);
-if(full_1 == 1 && full_r == 1)
-full = 1;
+ full = node_is_full(tree);
+ binary_tree_is_full(tree->left);
+ binary_tree_is_full(tree->right);
+
 return (full);
 }
 
