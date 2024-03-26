@@ -19,7 +19,7 @@ return (0);
 if (tree->left)
 left_height = 1 + binary_tree_balance(tree->left);
 else
-left_height = 0;
+left_height = 1;
 if (tree->right)
 right_height = 1 + binary_tree_balance(tree->right);
 else
