@@ -4,20 +4,19 @@
 /**
  * binary_tree_delete - delete
  *
- * @tree: Pointer to the node to print
+ * @root: Pointer to the node to print
  *
  * Return: binary_tree_t
  */
 void binary_tree_delete(binary_tree_t *root)
 {
-if (root == NULL) 
+if (root == NULL)
 return;
-binary_tree_delete(root->left);
-binary_tree_delete(root->right);
 free(root->left);
 root->left = NULL;
 free(root->right);
 root->right = NULL;
 free(root);
+binary_tree_delete(root->left);
+binary_tree_delete(root->right);
 }
-
