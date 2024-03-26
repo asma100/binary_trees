@@ -16,14 +16,8 @@ size_t left_height, right_height, balance;
 
 if (tree == NULL)
 return (0);
-if (tree->left)
-left_height = 1 + binary_tree_balance(tree->left);
-else
-left_height = 0;
-if (tree->right)
-right_height = 1 + binary_tree_balance(tree->right);
-else
-right_height = 0;
+left_height = binary_tree_height(tree->left);
+right_height = binary_tree_height(tree->right);
 balance = left_height - right_height;
 return (balance);
 }
