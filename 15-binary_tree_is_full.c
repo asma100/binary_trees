@@ -26,8 +26,8 @@ int full_1, full_r, full;
 if (tree == NULL)
 return (0);
 node_is_full(tree);
-full_1 = binary_tree_full(tree->left);
-full_r = binary_tree_full(tree->right);
+full_1 = binary_tree_is_full(tree->left);
+full_r = binary_tree_is_full(tree->right);
 if(full_1 == 1 && full_r == 1)
 full = 1;
 return (full);
