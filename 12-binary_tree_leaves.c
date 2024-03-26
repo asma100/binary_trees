@@ -20,4 +20,5 @@ leaves = leaves + leaf;
 binary_tree_leaves(tree->left);
 binary_tree_leaves(tree->right);
 binary_tree_leaves(tree);
+return(leaves);
 }
