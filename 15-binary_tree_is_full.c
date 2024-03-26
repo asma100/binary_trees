@@ -19,9 +19,9 @@ return (0);
 }
 
 
-size_t binary_tree_is_full(const binary_tree_t *tree)
+int binary_tree_is_full(const binary_tree_t *tree)
 {
-size_t full_1, full_r, full;
+int full_1, full_r, full;
 
 if (tree == NULL)
 return (0);
