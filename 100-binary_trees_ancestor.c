@@ -18,7 +18,7 @@ ancestor = first;
 while (ancestor)
 {
 if (is_ancestor(ancestor, second))
-return (binary_tree_t *)ancestor;
+return ancestor;
 ancestor = ancestor->parent;
 }
 
